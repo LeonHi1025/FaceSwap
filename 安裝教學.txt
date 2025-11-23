@@ -1,0 +1,31 @@
+#首先新創一個資料夾，prompt切換到該目錄下開始操作
+#把雲端內的資料丟到該資料夾下
+
+#爆紅字不要理他，後續會補上
+#album...報錯不要理他，那個不會用到
+
+conda create -n facefinal python=3.10 -y
+
+conda activate facefinal
+
+pip install opencv-python==4.6.0.66
+
+pip install insightface --no-deps
+
+#消註解
+
+pip install onnx
+
+pip install onnxruntime==1.16.3
+
+pip install cython easydict matplotlib Pillow prettytable requests scikit-image scikit-learn scipy tqdm
+
+pip install torch==1.13.1+cpu torchvision==0.14.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
+
+pip install numpy==1.25.2 --force-reinstall
+
+pip install gfpgan==1.3.8
+
+python final.py --source input.jpg --reference target.jpg --input input.mp4 --output final.mp4
+
+# Happy Ending
